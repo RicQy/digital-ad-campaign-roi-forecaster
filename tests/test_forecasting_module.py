@@ -4,6 +4,7 @@ import pandas as pd
 from ad_roi_forecaster.forecasting.baseline import BaselineForecaster
 from ad_roi_forecaster.forecasting.model_selector import ModelSelector
 
+
 # Sample data for testing
 def sample_campaign_df():
     data = {
@@ -14,6 +15,7 @@ def sample_campaign_df():
         "date": ["2024-01-01", "2024-01-02", "2024-01-03"],
     }
     return pd.DataFrame(data)
+
 
 def test_baseline_forecaster():
     df = sample_campaign_df()
@@ -26,11 +28,16 @@ def test_baseline_forecaster():
     assert model.is_trained, "Model should be trained"
     assert model.train_score is not None, "Training score should be calculated"
 
+
 def test_model_selector():
     df = sample_campaign_df()
     model_selector = ModelSelector()
     model_selector.fit(df)
 
     # Ensure the best model is selected
-    assert model_selector.best_model is not None, "There should be a best model selected"
-    assert model_selector.best_model_name is not None, "Best model name should be available"
+    assert (
+        model_selector.best_model is not None
+    ), "There should be a best model selected"
+    assert (
+        model_selector.best_model_name is not None
+    ), "Best model name should be available"

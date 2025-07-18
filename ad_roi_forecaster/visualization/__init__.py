@@ -31,7 +31,7 @@ from .plots import (
     plot_budget_allocation,
     plot_campaign_performance,
     create_roi_trend_plot,
-    save_all_plots
+    save_all_plots,
 )
 
 # Import reporting functions
@@ -40,23 +40,22 @@ from .report import (
     generate_html_report,
     create_executive_summary,
     ReportGenerator,
-    ReportConfig
+    ReportConfig,
 )
 
 # Export all main components
 __all__ = [
     # Plotting functions
-    'plot_spend_vs_conversions',
-    'plot_forecasted_conversions',
-    'plot_budget_allocation',
-    'plot_campaign_performance',
-    'create_roi_trend_plot',
-    'save_all_plots',
-    
+    "plot_spend_vs_conversions",
+    "plot_forecasted_conversions",
+    "plot_budget_allocation",
+    "plot_campaign_performance",
+    "create_roi_trend_plot",
+    "save_all_plots",
     # Reporting functions
-    'generate_pdf_report',
-    'generate_html_report',
-    'create_executive_summary',
-    'ReportGenerator',
-    'ReportConfig'
+    "generate_pdf_report",
+    "generate_html_report",
+    "create_executive_summary",
+    "ReportGenerator",
+    "ReportConfig",
 ]

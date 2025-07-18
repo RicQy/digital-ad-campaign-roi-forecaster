@@ -4,17 +4,18 @@ import sys
 import os
 
 # Add the project root to the Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Configuration for pytest
 pytest_plugins = []
+
 
 # Common fixtures can be defined here
 @pytest.fixture
 def sample_data():
     """Fixture providing sample campaign data."""
     import pandas as pd
-    
+
     data = {
         "campaign_id": ["CAMP001", "CAMP002", "CAMP003"],
         "campaign_name": ["Test Campaign 1", "Test Campaign 2", "Test Campaign 3"],
@@ -29,6 +30,6 @@ def sample_data():
         "target_audience": ["Young Adults", "Millennials", "Gen Z"],
         "geographic_region": ["US", "US", "CA"],
         "budget_daily": [150, 250, 350],
-        "budget_total": [3000, 5000, 7000]
+        "budget_total": [3000, 5000, 7000],
     }
     return pd.DataFrame(data)

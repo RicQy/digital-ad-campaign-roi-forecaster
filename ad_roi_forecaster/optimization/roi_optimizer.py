@@ -4,7 +4,9 @@ from typing import List, Tuple
 from ad_roi_forecaster.data.schemas import CampaignDataset
 
 
-def optimize_roi(campaign_data: CampaignDataset, total_budget: float) -> Tuple[List[float], float]:
+def optimize_roi(
+    campaign_data: CampaignDataset, total_budget: float
+) -> Tuple[List[float], float]:
     """
     Optimize ROI given a set of campaign data and a total budget.
 
@@ -27,8 +29,11 @@ def optimize_roi(campaign_data: CampaignDataset, total_budget: float) -> Tuple[L
 
     # Constraints
     constraints = (
-        {'type': 'eq', 'fun': lambda spend_allocation: np.sum(spend_allocation) - total_budget},  # Total budget constraint
-        {'type': 'ineq', 'fun': lambda spend: spend}  # Each spend should be >= 0
+        {
+            "type": "eq",
+            "fun": lambda spend_allocation: np.sum(spend_allocation) - total_budget,
+        },  # Total budget constraint
+        {"type": "ineq", "fun": lambda spend: spend},  # Each spend should be >= 0
     )
 
     # Initial guess: allocate equally, but handle zero budget case
@@ -39,15 +44,14 @@ def optimize_roi(campaign_data: CampaignDataset, total_budget: float) -> Tuple[L
 
     # Solve optimization problem
     solution = minimize(
-        objective, 
+        objective,
         x0,
-        method='SLSQP',
+        method="SLSQP",
         constraints=constraints,
-        bounds=[(0, None) for _ in range(n)]
+        bounds=[(0, None) for _ in range(n)],
     )
 
     # Calculate expected ROI
     expected_roi = -solution.fun
 
     return solution.x, expected_roi
-
