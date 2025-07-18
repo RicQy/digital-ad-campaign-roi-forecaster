@@ -16,10 +16,18 @@ jobs:
     - name: Install dependencies
       run: |
         uv sync --dev
-    - name: Run linting
+    - name: Verify installation
       run: |
-        uv run black --check .
-        uv run flake8 .
+        uv run python --version
+        uv run black --version
+        uv run flake8 --version
+        uv run pytest --version
+    - name: Run Black formatting check
+      run: |
+        uv run black --check --diff --color .
+    - name: Run flake8 linting
+      run: |
+        uv run flake8 . --show-source --statistics
     - name: Run tests
       run: |
-        uv run pytest tests/ --maxfail=5 --disable-warnings
+        uv run pytest tests/ --maxfail=5 --disable-warnings -v

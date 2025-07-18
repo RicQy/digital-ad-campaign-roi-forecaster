@@ -27,8 +27,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest",
-    "black",
-    "flake8",
+    "black>=24.8.0",
+    "flake8>=5.0.4",
     "mypy",
 ]
 
@@ -36,14 +36,28 @@ dev = [
 ad-roi-forecaster = "ad_roi_forecaster.cli.cli:cli"
 forecast-roi = "ad_roi_forecaster.cli.cli:cli"
 
-[dependency-groups]
-dev = [
-    "black>=24.8.0",
-    "flake8>=5.0.4",
-]
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
