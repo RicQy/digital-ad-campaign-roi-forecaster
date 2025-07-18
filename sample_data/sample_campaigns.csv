@@ -1,0 +1,31 @@
+campaign_id,campaign_name,campaign_type,platform,date,spend,impressions,clicks,conversions,revenue,target_audience,geographic_region,budget_daily,budget_total
+CAMP001,Summer Sale - Search,search,google,2024-01-01,150.50,10000,250,15,450.00,Young Adults,US,200.00,5000.00
+CAMP002,Brand Awareness - Display,display,facebook,2024-01-01,300.25,50000,1200,45,1350.00,Millennials,US,400.00,10000.00
+CAMP003,Video Campaign,video,youtube,2024-01-02,500.00,25000,800,25,1250.00,Gen Z,CA,600.00,15000.00
+CAMP004,Social Media Push,social,instagram,2024-01-02,200.75,15000,450,20,800.00,Women 25-40,US,300.00,8000.00
+CAMP005,Shopping Campaign,shopping,google,2024-01-03,350.00,20000,600,35,1750.00,Shoppers,US,500.00,12000.00
+CAMP006,LinkedIn Professional,social,linkedin,2024-01-03,400.00,8000,200,10,1200.00,Professionals,US,450.00,9000.00
+CAMP007,Twitter Engagement,social,twitter,2024-01-04,100.00,12000,300,8,320.00,Tech Enthusiasts,US,150.00,3000.00
+CAMP008,TikTok Viral,social,tiktok,2024-01-04,250.00,30000,900,30,750.00,Gen Z,US,300.00,7500.00
+CAMP009,Retargeting Campaign,display,facebook,2024-01-05,180.00,8000,320,25,1000.00,Previous Visitors,US,250.00,6000.00
+CAMP010,Search Brand Defense,search,google,2024-01-05,120.00,5000,150,12,600.00,Brand Searchers,US,200.00,4000.00
+CAMP011,Holiday Display,display,facebook,2024-01-06,450.00,35000,1400,50,2000.00,Holiday Shoppers,US,500.00,13500.00
+CAMP012,B2B Lead Gen,search,google,2024-01-06,275.00,6000,180,22,2200.00,Business Owners,US,350.00,8250.00
+CAMP013,Mobile App Install,display,facebook,2024-01-07,320.00,45000,1800,75,1500.00,Mobile Users,US,400.00,9600.00
+CAMP014,YouTube Shorts,video,youtube,2024-01-07,380.00,28000,950,35,1050.00,Gen Z,CA,450.00,11400.00
+CAMP015,Instagram Stories,social,instagram,2024-01-08,225.00,22000,660,28,840.00,Millennials,US,300.00,6750.00
+CAMP016,Google Shopping,shopping,google,2024-01-08,400.00,18000,720,40,2400.00,E-commerce,US,500.00,12000.00
+CAMP017,Facebook Reels,video,facebook,2024-01-09,310.00,32000,1280,45,1350.00,Content Creators,US,400.00,9300.00
+CAMP018,LinkedIn Video,video,linkedin,2024-01-09,480.00,12000,360,18,1800.00,Professionals,US,600.00,14400.00
+CAMP019,Twitter Promoted,social,twitter,2024-01-10,150.00,15000,450,15,450.00,Tech Community,US,200.00,4500.00
+CAMP020,TikTok Branded,social,tiktok,2024-01-10,275.00,40000,1200,50,1250.00,Gen Z,US,350.00,8250.00
+CAMP021,Search Competitor,search,google,2024-01-11,195.00,7500,225,18,900.00,Competitor Audience,US,250.00,5850.00
+CAMP022,Display Remarketing,display,facebook,2024-01-11,240.00,12000,480,32,1280.00,Website Visitors,US,320.00,7200.00
+CAMP023,YouTube Pre-Roll,video,youtube,2024-01-12,420.00,30000,900,30,1200.00,Video Viewers,CA,500.00,12600.00
+CAMP024,Instagram Carousel,display,instagram,2024-01-12,285.00,25000,750,35,1050.00,Visual Audience,US,360.00,8550.00
+CAMP025,Shopping Seasonal,shopping,google,2024-01-13,380.00,22000,880,48,2400.00,Seasonal Shoppers,US,450.00,11400.00
+CAMP026,LinkedIn Sponsored,social,linkedin,2024-01-13,350.00,10000,300,15,1500.00,Business Network,US,400.00,10500.00
+CAMP027,Twitter Video,video,twitter,2024-01-14,200.00,18000,540,20,600.00,Video Enthusiasts,US,250.00,6000.00
+CAMP028,TikTok Challenge,social,tiktok,2024-01-14,330.00,50000,1500,60,1500.00,Viral Audience,US,400.00,9900.00
+CAMP029,Google Search DSA,search,google,2024-01-15,175.00,8000,200,16,800.00,Broad Audience,US,225.00,5250.00
+CAMP030,Facebook Collection,display,facebook,2024-01-15,410.00,38000,1520,55,2200.00,Product Browsers,US,500.00,12300.00
