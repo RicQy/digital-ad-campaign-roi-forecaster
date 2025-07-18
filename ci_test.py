@@ -45,7 +45,7 @@ def main():
         ("uv run black --version", "Check Black version"),
         ("uv run flake8 --version", "Check flake8 version"),
         ("uv run pytest --version", "Check pytest version"),
-        ("uv run black --check --diff --color .", "Black formatting check"),
+        ("uv run black --check --diff .", "Black formatting check"),
         ("uv run flake8 . --show-source --statistics", "Flake8 linting"),
         ("uv run pytest tests/ --maxfail=5 --disable-warnings -v", "Run tests"),
     ]

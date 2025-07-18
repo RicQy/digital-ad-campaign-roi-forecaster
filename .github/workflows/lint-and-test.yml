@@ -15,23 +15,25 @@ jobs:
       uses: astral-sh/setup-uv@v1
       with:
         version: "latest"
-    - name: Create lock file
-      run: uv lock
-    - name: Install dependencies
+    - name: Install linting tools globally
       run: |
-        uv sync --dev --locked
+        python -m pip install --upgrade pip
+        pip install black flake8
+    - name: Install project dependencies
+      run: |
+        uv sync --dev
     - name: Verify installation
       run: |
-        uv run python --version
-        uv run black --version
-        uv run flake8 --version
+        python --version
+        black --version
+        flake8 --version
         uv run pytest --version
     - name: Run Black formatting check
       run: |
-        uv run black --check --diff .
+        black --check --diff .
     - name: Run flake8 linting
       run: |
-        uv run flake8 . --show-source --statistics
+        flake8 . --show-source --statistics
     - name: Run tests
       run: |
         uv run pytest tests/ --maxfail=5 --disable-warnings -v

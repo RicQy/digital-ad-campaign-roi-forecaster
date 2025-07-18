@@ -66,3 +66,20 @@ The application follows a modular architecture with clear separation of concerns
 
 For more comprehensive usage details, see [docs/USAGE.md](docs/USAGE.md).
 
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**CI/CD Pipeline Failures:**
+- If you see "Failed to spawn: black" errors, the GitHub Actions workflow installs linting tools globally
+- For local development, use `uv run black` and `uv run flake8`
+- Run `python ci_test.py` to test the pipeline locally
+
+**Import Errors:**
+- Make sure you're using `uv run` prefix for all commands
+- Verify dependencies are installed with `uv sync --dev`
+
+**Visualization Issues:**
+- If plots don't generate, check that matplotlib backend is available
+- Reports may be large (2MB+) due to embedded charts
+
