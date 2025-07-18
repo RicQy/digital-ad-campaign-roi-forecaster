@@ -158,10 +158,15 @@ def plot_forecasted_conversions(
         markersize=4,
     )
 
-    # Plot forecast data
+    # Plot forecast data - check for both possible column names
+    forecast_col = (
+        "predicted_conversions"
+        if "predicted_conversions" in forecast_data.columns
+        else "conversions"
+    )
     ax.plot(
         forecast_data["date"],
-        forecast_data["conversions"],
+        forecast_data[forecast_col],
         label="Forecast",
         color="red",
         linewidth=2,
@@ -209,8 +214,13 @@ def plot_forecasted_conversions(
 
     # Add summary statistics
     if len(forecast_data) > 0:
-        avg_forecast = forecast_data["conversions"].mean()
-        total_forecast = forecast_data["conversions"].sum()
+        forecast_col = (
+            "predicted_conversions"
+            if "predicted_conversions" in forecast_data.columns
+            else "conversions"
+        )
+        avg_forecast = forecast_data[forecast_col].mean()
+        total_forecast = forecast_data[forecast_col].sum()
 
         ax.text(
             0.02,
